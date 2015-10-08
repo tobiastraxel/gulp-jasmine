@@ -28,6 +28,8 @@ module.exports = function (options) {
 
 	var jasmine = new Jasmine();
 
+	jasmine.loadConfigFile(process.env["JASMINE_CONFIG_PATH"]);
+
 	if (options.timeout) {
 		jasmine.jasmine.DEFAULT_TIMEOUT_INTERVAL = options.timeout;
 	}
